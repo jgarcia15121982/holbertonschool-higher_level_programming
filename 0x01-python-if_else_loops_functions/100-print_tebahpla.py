@@ -4,4 +4,4 @@ for i in reversed(range(97, 123)):
         i = chr(i)
     elif i % 2 != 0:
         i = chr(i).upper()
-    print ('{}'.format(i), end='')
+    print('{}'.format(i), end='')
