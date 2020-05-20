@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+# !/usr/bin/python3
+
 """Class Square"""
 
 
@@ -38,7 +39,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         if not isinstance(value[1], int) or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__value = value
+        self.__position = value
 
     def area(self):
         """calculates the area of a square"""
