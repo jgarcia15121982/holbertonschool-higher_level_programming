@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+0-add_integer.py file
+Functions:
+-> add_integer(a, b=98)
+"""
 
 
 def add_integer(a, b=98):
