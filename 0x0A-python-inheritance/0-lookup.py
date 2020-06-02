@@ -2,5 +2,5 @@
 def lookup(obj):
     '''function that returns the list of available
     attributes and methods of an object'''
-    list = dir(obj)
-    return list
+    lk_list = dir(obj)
+    return lk_list
