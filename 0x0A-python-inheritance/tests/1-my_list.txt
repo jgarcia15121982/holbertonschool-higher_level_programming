@@ -1,0 +1,66 @@
+1-my_list.txt
+# ===============================================
+# Unit test 1-my_list
+# ===============================================
+
+Using ''print_sorted''
+----------------------
+
+
+Import module:
+    >>> MyList = __import__("1-my_list").MyList
+
+---------------------
+---------------------
+    Providing 0 arguments    
+
+    >>> lst = MyList()
+    >>> lst.print_sorted()
+    []
+
+---------------------
+---------------------
+    Providing integer arguments
+
+    >>> lst.append(2)
+    >>> lst.append(100)
+    >>> lst.append(75)
+    >>> print(lst)
+    [2, 100, 75]
+
+    >>> lst.print_sorted()
+    [2, 75, 100]
+
+    >>> print(lst)
+    [2, 100, 75]
+
+    >>> lst.append(-39)
+    >>> lst.print_sorted()
+    [-39, 2, 75, 100]
+
+---------------------
+    Providing negative integer arguments
+
+    >>> ng = MyList()
+    >>> ng.append(-5)
+    >>> ng.append(-45)
+    >>> ng.append(-100)
+    >>> print(ng)
+    [-5, -45, -100]
+
+    >>> ng.print_sorted()
+    [-100, -45, -5]
+
+    >>> print(ng)
+    [-5, -45, -100]
+
+----------------------
+    Wrong arguments
+
+    >>> wrong = MyList()
+    >>> wrong.append('hello')
+    >>> wrong.append(28)
+    >>> wrong.print_sorted()
+    Traceback (most recent call last):
+    ...
+    TypeError: unorderable types: int() < str()
