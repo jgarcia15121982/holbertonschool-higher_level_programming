@@ -1,4 +1,4 @@
-  #!/usr/bin/python3
+#!/usr/bin/python3
 """Number of lines module"""
 
 
@@ -10,3 +10,4 @@ def number_of_lines(filename=""):
         for numline in myFile:
             nb_line += 1
     return nb_line
+    myFile.close()
