@@ -261,8 +261,9 @@ Import module:
 -----------------------------
 -----------------------------
     Nan float:
-    >>>add_integer(float('Nan'), 3)
+    >>> add_integer(float('Nan'), 3)
     Traceback (most recent call last):
+              ...
     ValueError: cannot convert float Nan to integer
 
 -----------------------------
