@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+2-say_my_name.py file
+Functions:
+-> say_my_name(first_name, last_name="")
+"""
 
 
 def say_my_name(first_name, last_name=""):
