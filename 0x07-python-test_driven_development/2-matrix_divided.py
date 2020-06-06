@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-
+"""
+2-matrix_divided.py file
+Functions:
+-> matrix_divided(matrix, div)
+"""
 
 def matrix_divided(matrix, div):
     """
@@ -14,13 +18,26 @@ def matrix_divided(matrix, div):
 
 
     """
-    if type(matrix) not in [int, float]:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    if len(matrix[0]) != len(matrix[1]):
+    if matrix == None:
+        raise TypeError("matrix must be a (list of lists) of \
+                         integers/floats")
+
+    if div == None:
+        raise TypeError("div must be a number")
+                     
+    for element_0 in matrix[0]:
+        if type(element_0) not in [int, float]:
+            raise TypeError("matrix must be a matrix (list of lists) of \
+                             integers/floats")
+    for element_1 in matrix[1]:
+        if type(element_1) not in [int, float]:
+            raise TypeError("matrix must be a matrix (list of lists) of \
+                             integers/floats")
+    if len(matrix[0]) is not len(matrix[1]):
         raise TypeError("Each row of the matrix must have the same size")
     if type(div) not in [int, float]:
-        raise TypeError ("div must be a number")
-    if div == 0
+        raise TypeError("div must be a number")
+    if div == 0:
         raise ZeroDivisionError("division by zero")
     matrix_b = matrix.copy()
     a = []
