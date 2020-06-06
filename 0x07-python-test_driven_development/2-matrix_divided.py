@@ -49,6 +49,6 @@ def matrix_divided(matrix, div):
 
     for j in matrix_b[1]:
         b.append(round(j/div, 2))
-
+        
     matrix_b = [a, b]
     return matrix_b
