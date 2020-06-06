@@ -11,8 +11,16 @@ Using ''add_integer''
 Import module:
        >>> add_integer = __import__("0-add_integer").add_integer
 
+
 ---------------------
----------------------
+    Nan float
+
+    >>> add_integer(float('nan'), 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+-----------------------------
     No b argument provided
 
     >>> add_integer(2)
@@ -22,7 +30,6 @@ Import module:
     98
 
 -----------------------------
------------------------------
     No arguments provided
 
     >>> add_integer()
@@ -30,14 +37,12 @@ Import module:
     TypeError: add_integer() missing 1 required positional argument: 'a'
 
 -----------------------------
------------------------------
     More than two arguments
 
     >>> add_integer(2, 3, 5)
     Traceback (most recent call last):
     TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
------------------------------
 -----------------------------
     None arguments
 
@@ -57,27 +62,6 @@ Import module:
     Traceback (most recent call last):
     TypeError: b must be an integer
 
------------------------------
------------------------------
-    TypeError boolean
-
-    >>> add_integer(False, True)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-
-    >>> add_integer(False)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-
-    >>> add_integer(True, 10)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-    
-    >>> add_integer(10, False)
-    Traceback (most recent call last):
-    TypeError: b must be an integer
-
------------------------------
 -----------------------------
     TypeError String
 
@@ -257,14 +241,3 @@ Import module:
     Traceback (most recent call last):
               ...
     OverflowError: cannot convert float infinity to integer
-
------------------------------
------------------------------
-    Nan float:
-    >>> add_integer(float('Nan'), 3)
-    Traceback (most recent call last):
-              ...
-    ValueError: cannot convert float Nan to integer
-
------------------------------
------------------------------
