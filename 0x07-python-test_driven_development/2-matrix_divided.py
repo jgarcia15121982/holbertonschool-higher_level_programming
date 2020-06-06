@@ -5,6 +5,7 @@ Functions:
 -> matrix_divided(matrix, div)
 """
 
+
 def matrix_divided(matrix, div):
     """
     Function that divides all elements of a matrix
@@ -18,13 +19,13 @@ def matrix_divided(matrix, div):
 
 
     """
-    if matrix == None:
+    if matrix is None:
         raise TypeError("matrix must be a (list of lists) of \
                          integers/floats")
 
-    if div == None:
+    if div is None:
         raise TypeError("div must be a number")
-                     
+
     for element_0 in matrix[0]:
         if type(element_0) not in [int, float]:
             raise TypeError("matrix must be a matrix (list of lists) of \
