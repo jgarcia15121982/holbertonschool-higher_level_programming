@@ -76,10 +76,13 @@ class Rectangle(Base):
 
     def display(self):
         """method display"""
+        s = " " * self.__x
+        tag = "#" * self.__width
+        line = s + tag
+        for h in range(self.__y):
+            print("")
         for i in range(self.__height):
-            for i in range(self.__width):
-                print("#", end="")
-            print()
+            print(line)
 
     def __str__(self):
         """method __str__ that returns
