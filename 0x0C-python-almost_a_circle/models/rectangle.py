@@ -39,7 +39,7 @@ class Rectangle(Base):
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
-            raise ValueError("heigth must be > 0")
+            raise ValueError("height must be > 0")
         self.__height = height
 
     @property
@@ -93,7 +93,7 @@ class Rectangle(Base):
                                                        self.__y,
                                                        self.__width,
                                                        self.__height)
-    
+
     def update(self, *args, **kwargs):
         """method that update
             values of the class
