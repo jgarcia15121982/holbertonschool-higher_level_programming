@@ -10,7 +10,7 @@ class Square(Rectangle):
         """initialize Square class"""
         self.size = size
         super().__init__(size, size, x, y, id)
-    
+
     @property
     def size(self):
         """get value of size"""
@@ -24,8 +24,7 @@ class Square(Rectangle):
         if size <= 0:
             raise ValueError("width must be > 0")
         self.__size = size
-        
-    
+
     def __str__(self):
         """method __str__ that returns
            the square description
@@ -33,6 +32,4 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}".format(self.id,
                                                  self.x,
                                                  self.y,
-                                                 self.width)       
-     
-
+                                                 self.width)
