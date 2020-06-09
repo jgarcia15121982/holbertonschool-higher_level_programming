@@ -8,11 +8,11 @@ class Rectangle(Base):
     """class Rectangle that inherits from Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize Rectangle class"""
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
@@ -98,13 +98,47 @@ class Rectangle(Base):
         """method that update
             values of the class
         """
-        if kwargs.get('id'):
-            self.id = kwargs['id']
-        if kwargs.get('width'):
-            self.__width = kwargs['width']
-        if kwargs.get('height'):
-            self.__height = kwargs['height']
-        if kwargs.get('x'):
-            self.__x = kwargs['x']
-        if kwargs.get('y'):
-            self.__y = kwargs['y']
+        if len(args) != 0:
+            if len(args) == 1:
+                self.id = args[0]
+            if len(args) == 2:
+                self.id = args[0]
+                self.width = args[1]
+            if len(args) == 3:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+            if len(args) == 4:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+            if len(args) == 5:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+        else:
+            if kwargs.get('id'):
+                self.id = kwargs['id']
+            if kwargs.get('width'):
+                self.__width = kwargs['width']
+            if kwargs.get('height'):
+                self.__height = kwargs['height']
+            if kwargs.get('x'):
+                self.__x = kwargs['x']
+            if kwargs.get('y'):
+                self.__y = kwargs['y']
+
+    def to_dictionary(self):
+        """Public method that returns the dictionary
+            representation of a Rectangle
+        """
+        my_dict = {}
+        my_dict['id'] = self.id
+        my_dict['width'] = self.width
+        my_dict['height'] = self.height
+        my_dict['x'] = self.x
+        my_dict['y'] = self.y
+        return my_dict
