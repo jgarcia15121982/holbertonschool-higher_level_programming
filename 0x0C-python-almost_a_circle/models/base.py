@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """class Base"""
+import json
 
 
 class Base():
@@ -20,7 +21,6 @@ class Base():
         """returns the JSON string representation
           of list_dictionaries
         """
-        import json
         if list_dictionaries is None:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
@@ -40,3 +40,9 @@ class Base():
         with open(file_nm, mode="w+", encoding='utf-8') as myFile:
             json_str = Base.to_json_string(nw_list)
             myFile.write(json_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None:
+            json_string = "[]"
+        return json.loads(json_string)
