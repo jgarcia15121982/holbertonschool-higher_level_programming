@@ -19,11 +19,11 @@ if __name__ == "__main__":
                          port=3306)
 
     cur = db.cursor()
-    qry1 = """SELECT * FROM states
-              WHERE name = %s
+    cur.execute("""SELECT * FROM states
+              WHERE name LIKE BINARY '{:s}'
               ORDER BY id ASC
-           """
-    cur.execute(qry1, [state_nm_srch])
+           """.format(state_nm_srch))
+    
     rows = cur.fetchall()
     for row in cur:
         print(row)
