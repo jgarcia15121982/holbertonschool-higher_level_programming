@@ -23,7 +23,6 @@ if __name__ == "__main__":
               WHERE name LIKE BINARY '{:s}'
               ORDER BY id ASC
            """.format(state_nm_srch))
-    
     rows = cur.fetchall()
     for row in cur:
         print(row)
