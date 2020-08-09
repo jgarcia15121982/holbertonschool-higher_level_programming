@@ -19,7 +19,10 @@ if __name__ == "__main__":
                          port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY id", [state_nm_srch])
+    cur.execute("SELECT * FROM states "
+                "WHERE name = %s "
+                "ORDER BY id ASC", 
+                [state_nm_srch])
     rows = cur.fetchall()
     for row in cur:
         print(row)
