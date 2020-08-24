@@ -5,10 +5,10 @@
    found in the header of the response.
 """
 
-import urllib
+import urllib.request
 import sys
 
 
 if __name__ == "__main__":
-    with request.urlopen(sys.argv[1]) as req:
+    with urllib.request.urlopen(sys.argv[1]) as req:
         print(req.headers['X-Request-Id'])
