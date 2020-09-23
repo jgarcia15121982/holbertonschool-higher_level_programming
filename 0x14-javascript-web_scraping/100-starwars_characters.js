@@ -2,8 +2,7 @@
 
 const request = require('request');
 
-const base = 'https://swapi-api.hbtn.io/api/films/'
-const url = base + process.argv[2];
+const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
 request(url, function (error, response, body) {
   if (error) {
@@ -22,4 +21,3 @@ request(url, function (error, response, body) {
     }
   }
 });
- 
